@@ -88,7 +88,7 @@ func NewListenerWithKey(host string, key *rsa.PrivateKey) (*Listener, error)
 func DialTargetWithKey(host string, key *rsa.PrivateKey) (*Dial, error)
 ```
 
-# Fingerprinting
+# Fingerprint documentation
 support for gathering the public key's fingerprint information correctly
 ```go
 //grabs the remote hosts fingerprint
