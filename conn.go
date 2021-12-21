@@ -64,3 +64,16 @@ func (c *Client) MakeConn() *Conn {
 func (c *Conn) Remote() net.Conn {
 	return c.socket
 }
+
+//gets the remote public rsa key information vector
+//used for encrypting messages for outgoing client sessions
+func (c *Conn) Public() *rsa.PublicKey {
+	return c.public
+}
+
+//gets the local private rsa key information vector
+//used for decrypting messages incoming from nodes safely
+func (c *Conn) Private() *rsa.PrivateKey {
+	//returns the private key value
+	return c.private
+}
