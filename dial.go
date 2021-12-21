@@ -66,6 +66,38 @@ func DialTarget(host string) (*Dial, error) {
 	return Dil.PingExchangeClient()
 }
 
+//dials the target with the host and rsa key passed into the function
+//this will allow us to connect to the target correctly and safely
+func DialTargetWithKey(host string, key *rsa.PrivateKey) (*Dial, error) {
+
+	//creates a new dial client instance
+	//this will be mainly used as the method for the dial client
+	var Dil *Dial = &Dial{
+		//stores the host/target which we will dial towards
+		//this will interface with the dial client to dial towards the target
+		host: host,
+		//stores the private key safely
+		//this will be used to decrypt incoming messages
+		private: key,
+	}
+
+	
+	//dials towards the target using the tcp protocol
+	//this will make sure we have connected with the server
+	Dil, err := Dil.createConnection()
+
+	//err handles the dial statement correctly
+	//makes sure we have connected with the target
+	if err != nil {
+		//returns the error which was found correctly
+		return nil, err
+	}
+
+	//performs the ping exchange with the server
+	//exchanges the information correctly and safely
+	return Dil.PingExchangeClient()
+}
+
 func (d *Dial) createConnection() (*Dial, error) {
 	//creates the new dial client properly
 	//we can dial safely with this information
