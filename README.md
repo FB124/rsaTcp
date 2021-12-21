@@ -114,4 +114,5 @@ func (c *Conn) Private() *rsa.PrivateKey
 func (c *Conn) Public() *rsa.PublicKey
 ```
 # Coming soon!
-* Exchange notes
+* Exchange notes/messages
+	- exchange custom information with the client/server when either dialing or accepting connections
