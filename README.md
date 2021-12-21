@@ -113,3 +113,5 @@ func (c *Conn) Private() *rsa.PrivateKey
 //allows you to access the ongoing public key information
 func (c *Conn) Public() *rsa.PublicKey
 ```
+# Coming soon!
+* Exchange notes
