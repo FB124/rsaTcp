@@ -87,3 +87,29 @@ func NewListenerWithKey(host string, key *rsa.PrivateKey) (*Listener, error)
 //client side custom dial with specified key
 func DialTargetWithKey(host string, key *rsa.PrivateKey) (*Dial, error)
 ```
+
+# Fingerprinting
+support for gathering the public key's fingerprint information correctly
+```go
+//grabs the remote hosts fingerprint
+func (c *Conn) RemoteFingerprint() ([]byte, error)
+```
+```go
+//grabs the local fingerprint being used correctly
+func (c *Conn) LocalFingerprint() ([]byte, error)
+```
+
+# Access more information inside the wrapper
+this will allow you to access the socket (net.conn), private (*rsa.PrivateKey) & public (*rsa.PublicKey)
+```go
+//allows you to access the ongoing socket information
+func (c *Conn) Remote() net.Conn
+```
+```go
+//allows you to access the ongoing private key information
+func (c *Conn) Private() *rsa.PrivateKey
+```
+```go
+//allows you to access the ongoing public key information
+func (c *Conn) Public() *rsa.PublicKey
+```
