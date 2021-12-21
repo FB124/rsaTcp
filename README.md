@@ -76,3 +76,14 @@ func main() {
 	fmt.Printf("CONNECTED TO %s\r\n", Conn.Remote().RemoteAddr().String())
 }
 ```
+
+# Custom key documentation
+to implement the custom key functionality you may either use the 2 options below (server & client)
+```go
+//server side custom listener with specified key
+func NewListenerWithKey(host string, key *rsa.PrivateKey) (*Listener, error)
+```
+```go
+//client side custom dial with specified key
+func DialTargetWithKey(host string, key *rsa.PrivateKey) (*Dial, error)
+```
