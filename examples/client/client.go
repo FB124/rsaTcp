@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/FB124/rsaTcp"
+	"rsaTcp"
 )
 
 func main() {

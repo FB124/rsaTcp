@@ -20,6 +20,8 @@ type Conn struct {
 	//stores all the bytes we have written to the remote host safely
 	//this will allow us to correctly handle this information properly
 	Written int
+	//exchange notes, this will allow you to forward custom information with the system
+	//custom messages with headers and values built inside a payload
 }
 
 //syncs the dial client with the conn struct

@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/hex"
 	"fmt"
-	"github.com/FB124/rsaTcp"
+	"rsaTcp"
 )
 
 func main() {
