@@ -3,6 +3,7 @@ basic golang net package (aka https://pkg.go.dev/net) wrapper implementing rsa e
 
 
 # Server side example
+this simple example will accept the incoming connections and perform the public key exchange
 ```go
 package main
 
