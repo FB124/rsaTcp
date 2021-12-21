@@ -9,7 +9,7 @@ package main
 
 import (
 	"fmt"
-	"tcpRsa"
+	"github.com/FB124/rsaTcp"
 )
 
 func main() {
@@ -54,7 +54,7 @@ package main
 
 import (
 	"fmt"
-	"tcpRsa"
+	"github.com/FB124/rsaTcp"
 )
 
 func main() {
