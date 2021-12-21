@@ -115,4 +115,4 @@ func (c *Conn) Public() *rsa.PublicKey
 ```
 # Coming soon!
 * Exchange notes/messages
-	- exchange custom information with the client/server when either dialing or accepting connections
+	- exchange custom information with the client/server when either dialing or accepting incoming connections
