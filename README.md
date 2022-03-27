@@ -1,4 +1,4 @@
-# rsaTcp - lightweight rsa implementaion of asymmetric (Rivest-Shamir-Adleman aka RSA) encryption on tcp servers
+# rsaTcp - lightweight rsa implementaion of asymmetric (Rivest-Shamir-Adleman aka RSA) encryption on tcp servers [OLD, SUGGESTED NOT TO USE THIS PACKAGE]
 basic golang net package (aka https://pkg.go.dev/net) wrapper implementing rsa encryption with signatures with connections
 
 
